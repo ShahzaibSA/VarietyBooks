@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
+    <link rel="stylesheet" href="./css/Sign_In.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAKlT-3nG2KhzNrgTeHOSEA7jtbBa9FQMo",
+    authDomain: "variety-books.firebaseapp.com",
+    projectId: "variety-books",
+    storageBucket: "variety-books.appspot.com",
+    messagingSenderId: "236474399488",
+    appId: "1:236474399488:web:6b3a9f422bedfd0222d1e5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <title>Sign Up</title>
+</head>
+<body>
+  
+    <nav class="navbar navbar-dark bg-dark">
+    <div class="my-navbar">
+      <a class="navbar-brand" href="#">
+      <img src="./images/Logo.png" class="logo" alt="logo">
+      <h5>Variety Books</h5>
+    </a>
+  </div>
+    </nav>
+
+    <div id="message"></div>
+
+    <div class="fluid-container">
+        <div class="row">
+
+            <div  class="col-xs-12 col-sm-4 col-md-4"></div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 form-container">
+              			<div class="card-header">
+				              <h3>Sign Up</h3>
+				              <div class="d-flex justify-content-end social_icon">
+				              	<span>
+                          <a href="./index.html">
+                            <i class="fas fa-sign-in-alt mr-2"></i>
+                          </a>
+                        </span>
+				              	<span><i onclick="fb_login()" class="fab fa-facebook-square"></i></span>
+				              </div>
+			              </div>
+
+                <div class="p-2">
+
+                    <div class="input-group form-group">
+						          <div class="input-group-prepend">
+						          	<span class="input-group-text"><i class="fas fa-user"></i> </span>
+						          </div>
+						          <input required id="name" type="text" class="form-control" placeholder="Full Name" >
+					          </div>
+
+                    <div class="input-group form-group">
+						          <div class="input-group-prepend">
+						          	<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+						          </div>
+						          <input id="email" type="email" class="form-control" placeholder="Email" required>
+					          </div>
+
+                    <div class="input-group form-group">
+						          <div class="input-group-prepend">
+						          	<span class="input-group-text"><i class="fas fa-key"></i></span>
+						          </div>
+						          <input id="password" type="password" class="form-control" placeholder="Password" required>
+					          </div>
+
+                    <div class="input-group form-group">
+						          <div class="input-group-prepend">
+						          	<span class="input-group-text"><i class="fas fa-key"></i></span>
+						          </div>
+						          <input id="confirm_password" type="password" class="form-control" placeholder="Confirm Password" required>
+					          </div>
+<!-- 
+                    <div class="row align-items-center remember">
+						          <input type="checkbox">Remember Me
+					          </div>   -->
+
+                    <div>
+                      <label class="form-label">Upload Picture</label>
+                      <input type="file" id="uplodad_image" accept="image/*" required>
+                      <span id="progress"></span>
+                      <div class="d_img"><img id="display_image" alt="image"></div>
+                    </div>
+
+                    <div class="form-group mt-1">
+                        <input onclick="sign_up()" type="submit" value="Sign Up" class="btn float-right login_btn">
+					          </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+  <script src="./script/Sign_Up.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
